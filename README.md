@@ -8,6 +8,14 @@ Requires Python 3.9 or newer. The package has no runtime dependencies, and the f
 
 ## Install
 
+From PyPI:
+
+```bash
+pip install traceplus-py
+```
+
+Add the dev tools with `pip install "traceplus-py[dev]"`.
+
 From this repository:
 
 ```bash
