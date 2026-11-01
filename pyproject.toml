@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "traceplus"
+version = "0.1.0"
+description = "Structured JSON logging and trace context for the Python process you already run."
+readme = "README.md"
+requires-python = ">=3.9"
+keywords = ["logging", "telemetry", "tracing", "cloudwatch", "json"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[tool.setuptools]
+packages = ["traceplus", "traceplus.middleware"]
+
+[tool.setuptools.package-dir]
+traceplus = "."
+
+[tool.setuptools.package-data]
+traceplus = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".."]
